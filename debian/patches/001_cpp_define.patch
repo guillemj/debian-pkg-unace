@@ -1,0 +1,39 @@
+#DPATCHLEVEL=1
+diff -Naur unace-1.2b.orig/unix/makefile unace-1.2b/unix/makefile
+--- unace-1.2b.orig/unix/makefile	2002-08-24 01:17:20.000000000 +0200
++++ unace-1.2b/unix/makefile	2004-02-04 10:04:55.000000000 +0100
+@@ -10,26 +10,28 @@
+ OBJ = globals.o uac_comm.o uac_crc.o uac_crt.o uac_dcpr.o uac_sys.o unace.o
+ SRC = globals.c uac_comm.c uac_crc.c uac_crt.c uac_dcpr.c uac_sys.c unace.c
+ 
+-#CFLAGS = -dNOSTRICMP         #for UNIX compilers not supporting stricmp()
+-#CFLAGS = -dHI_LO_BYTE_ORDER  #select correct byte order for your machine!!
++#CFLAGS = -DNOSTRICMP         #for UNIX compilers not supporting stricmp()
++#CFLAGS = -DHI_LO_BYTE_ORDER  #select correct byte order for your machine!!
+ 
+ #CFLAGS = -Wall -O3 -s #-DNDEBUG
+ #CFLAGS = -g -Wall -DMDEBUG
+ #CFLAGS = -O3 -fno-strength-reduce -fomit-frame-pointer # These are for Linux
+-CFLAGS = -O -g -Wall -dLO_HI_BYTE_ORDER
++CFLAGS = -O -g -Wall -DLO_HI_BYTE_ORDER
+ CHALLOC = challoc.o
+ CHALLOC =
+ CHNEW = chnew.o challoc.o
+ CC = gcc
+ 
++OSTYPE = $(shell uname -s)
++
+ ifeq ($(OSTYPE), Linux)
+-CFLAGS += -DUNIX -DCASEINSENSE
++override CFLAGS += -DUNIX -DCASEINSENSE
+ else
+ ifeq ($(OSTYPE), DOS)
+ EXEEXT = .exe
+-CFLAGS += -DDOS
++override CFLAGS += -DDOS
+ else
+-CFLAGS += -DUNIX -DCASEINSENSE
++override CFLAGS += -DUNIX -DCASEINSENSE
+ endif
+ endif
+ 

@@ -1,0 +1,51 @@
+.TH UNACE 1 2004-02-28 "1.2b" "unace manual"
+.\" Please adjust this date whenever revising the manpage.
+.\"
+.\" Some roff macros, for reference:
+.\" .nh        disable hyphenation
+.\" .hy        enable hyphenation
+.\" .ad l      left justify
+.\" .ad b      justify to both left and right margins
+.\" .nf        disable filling
+.\" .fi        enable filling
+.\" .br        insert line break
+.\" .sp <n>    insert n+1 empty lines
+.\" for manpage-specific macros, see man(7)
+.SH NAME
+unace \- extract, test and view ACE archives
+.SH SYNOPSIS
+.B unace
+.RI < command >
+.RI [ switches ]
+.RI < archive [ .ace ]>
+.SH DESCRIPTION
+The \fBunace\fP utility is used for extracting, testing and viewing
+the contents of archives created with the ACE archiver.
+.SH COMMANDS
+.TP
+.B e
+Extract files.
+.TP
+.B l
+List archive.
+.TP
+.B t
+Test archive integrity.
+.TP
+.B v
+List archive (verbose).
+.TP
+.B x
+Extract files with full path.
+.SH SWITCHES
+.TP
+.B \-y
+Assume 'yes' on all questions, never ask for input.
+.SH SEE ALSO
+.BR gzip (1),
+.BR bzip2 (1),
+.BR arj (1),
+.BR ppmd (1).
+.SH AUTHOR
+This manual page was written by Guillem Jover <guillem@debian.org>,
+for the Debian project (but may be used by others).

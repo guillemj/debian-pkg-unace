@@ -1,0 +1,6 @@
+unace (1.2b-1) unstable; urgency=low
+
+  * Initial Release. (Closes: #220930)
+
+ -- Guillem Jover <guillem@debian.org>  Tue,  3 Feb 2004 02:30:09 +0100
+

@@ -1,0 +1,14 @@
+Source: unace
+Section: utils
+Priority: optional
+Maintainer: Guillem Jover <guillem@debian.org>
+Build-Depends: debhelper (>= 4.0.0)
+Standards-Version: 3.6.1
+
+Package: unace
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: extract, test and view .ace archives
+ The unace utility is used for extracting, testing and viewing
+ the contents of archives created with the ACE archiver.
+

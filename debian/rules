@@ -1,0 +1,100 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# Sample debian/rules that uses debhelper.
+# GNU copyright 1997 to 1999 by Joey Hess.
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+INSTALL=install
+INSTALL_PROGRAM=$(INSTALL) -m 755
+
+CFLAGS = -Wall -g
+
+ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
+	CFLAGS += -O0
+else
+	CFLAGS += -O2
+endif
+ifeq (,$(findstring nostrip,$(DEB_BUILD_OPTIONS)))
+	INSTALL_PROGRAM += -s
+endif
+
+include debian/patch.mk
+
+configure: configure-stamp
+configure-stamp: debian/test-endian
+	dh_testdir
+	
+	cp -f unix/makefile Makefile
+	cp -f unix/gccmaked .
+	
+	touch configure-stamp
+
+build: build-stamp
+
+build-stamp: pre-build configure-stamp
+	dh_testdir
+	
+	$(MAKE) dep CFLAGS="$(CFLAGS) -D$(shell debian/test-endian)"
+	$(MAKE) CFLAGS="$(CFLAGS) -D$(shell debian/test-endian)"
+	
+	touch build-stamp
+
+clean::
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp configure-stamp
+	
+	-$(MAKE) clean
+	rm -f debian/test-endian
+	rm -f Makefile gccmaked
+	
+	dh_clean
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_clean -k
+	dh_installdirs
+	
+	#$(MAKE) install DESTDIR=$(CURDIR)/debian/unace
+	$(INSTALL_PROGRAM) unace $(CURDIR)/debian/unace/usr/bin
+
+# Build architecture-independent files here.
+binary-indep: build install
+# Nothing to do.
+
+# Build architecture-dependent files here.
+binary-arch: build install
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs changes.log
+	dh_installdocs
+	dh_installexamples
+#	dh_install
+#	dh_installmenu
+#	dh_installdebconf
+#	dh_installlogrotate
+#	dh_installemacsen
+#	dh_installpam
+#	dh_installmime
+#	dh_installinit
+#	dh_installcron
+#	dh_installinfo
+	dh_installman
+	dh_link
+	dh_strip
+	dh_compress
+	dh_fixperms
+#	dh_perl
+#	dh_python
+#	dh_makeshlibs
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install configure

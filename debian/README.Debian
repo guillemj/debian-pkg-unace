@@ -1,0 +1,8 @@
+unace for Debian
+----------------
+
+This is an old version of unace that has been relicensed to GPL. New
+versions may get relicensed as well but upstream does not promise to
+do so for now.
+
+ -- Guillem Jover <guillem@debian.org>, Tue,  3 Feb 2004 02:30:09 +0100
