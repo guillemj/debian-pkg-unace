@@ -1,6 +1,17 @@
+unace (1.2b-2) unstable; urgency=low
+
+  * debian/test-endian.c:
+    - Added a lost sizeof in the big endian detection. (Closes: #239654)
+      Thanks Falk Hueffner <falk@debian.org>
+    - Print error message to stderr. And fix and improve the message.
+  * debian/copyrigth: Make clearer the origin of the original source.
+  * Added more "SEE ALSO" entries to the man page.
+
+ -- Guillem Jover <guillem@debian.org>  Wed, 24 Mar 2004 09:01:32 +0100
+
 unace (1.2b-1) unstable; urgency=low
 
   * Initial Release. (Closes: #220930)
 
- -- Guillem Jover <guillem@debian.org>  Tue,  3 Feb 2004 02:30:09 +0100
+ -- Guillem Jover <guillem@debian.org>  Sun,  7 Mar 2004 10:58:50 +0100
 

@@ -16,14 +16,14 @@ union {
 
 int main()
 {
-	test.w = 0x44332211; // in order of significance
+	test.w = 0x44332211;
 
 	if (test.b[0] == 0x11)
 		puts("LO_HI_BYTE_ORDER");
-	else if (test.b[(word_t) - 1] == 0x11)
+	else if (test.b[sizeof(word_t) - 1] == 0x11)
 		puts("HI_LO_BYTE_ORDER");
 	else {
-		puts("unkown");
+		fputs("error: unknown endianess", stderr);
 		return 1;
 	}
 
