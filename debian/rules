@@ -33,7 +33,7 @@ configure-stamp: debian/test-endian
 
 build: build-stamp
 
-build-stamp: pre-build configure-stamp
+build-stamp: patch configure-stamp
 	dh_testdir
 	
 	$(MAKE) dep CFLAGS="$(CFLAGS) -D$(shell debian/test-endian)"
