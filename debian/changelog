@@ -1,3 +1,9 @@
+unace (1.2b-1.backports.org.1) unstable; urgency=low
+
+  * Backport for woody.
+
+ -- Guillem Jover <guillem@debian.org>  Sat, 29 Jan 2005 14:31:03 +0100
+
 unace (1.2b-2) unstable; urgency=low
 
   * debian/test-endian.c:
