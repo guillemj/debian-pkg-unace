@@ -1,7 +1,7 @@
 unace (1.2b-3) unstable; urgency=high
 
   * Fix several buffer overflows [CAN-2005-0160] and directory
-    traversal bugs [CAN-2005-0161].
+    traversal bugs [CAN-2005-0161]. (Closes: #296839, #248374)
     Thanks to Ulf Härnhammar <Ulf.Harnhammar.9485@student.uu.se>.
   * Use License: instead of missplaced Copyright: on debian/copyright.
   * Provide a patch target instead of pre-build.
