@@ -10,6 +10,7 @@ unace (1.2b-4) UNRELEASED; urgency=low
     - Remove unused commented debhelper commands.
     - Do not use a build stamp.
     - Switch clean to single-colon target, make it depend on unpatch.
+    - Replace the configure target to normal file targets to be copied.
   * Clean up debian/patch.mk:
     - Rename clean to unpatch.
     - Switch patch and unpatch to single-colon targets.

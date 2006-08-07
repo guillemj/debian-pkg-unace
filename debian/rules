@@ -16,16 +16,15 @@ endif
 
 include debian/patch.mk
 
-configure: configure-stamp
-configure-stamp: debian/test-endian
+Makefile: unix/makefile
 	dh_testdir
-	
-	cp -f unix/makefile Makefile
-	cp -f unix/gccmaked .
-	
-	touch configure-stamp
+	cp -f $^ $@
 
-build: patch configure-stamp
+gccmaked: unix/gccmaked
+	dh_testdir
+	cp -f $^ $@
+
+build: patch debian/test-endian Makefile gccmaked
 	dh_testdir
 	
 	$(MAKE) dep CFLAGS="$(CFLAGS) -D$(shell debian/test-endian)"
