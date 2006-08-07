@@ -1,4 +1,4 @@
-unace (1.2b-4) UNRELEASED; urgency=low
+unace (1.2b-4) unstable; urgency=low
 
   * Now using Standards-Version 3.7.2 (no changes needed).
   * Switched to debhelper compatibility level 5.
@@ -16,7 +16,7 @@ unace (1.2b-4) UNRELEASED; urgency=low
     - Switch patch and unpatch to single-colon targets.
     - Add unpatch to the PHONY targets.
 
- -- Guillem Jover <guillem@debian.org>  Mon,  7 Aug 2006 14:26:46 +0300
+ -- Guillem Jover <guillem@debian.org>  Mon,  7 Aug 2006 15:27:52 +0300
 
 unace (1.2b-3) unstable; urgency=high
 
