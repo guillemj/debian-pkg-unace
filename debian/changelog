@@ -4,6 +4,7 @@ unace (1.2b-4) UNRELEASED; urgency=low
   * Switched to debhelper compatibility level 5.
   * Lower-case the manpage title.
   * Reindent debian/copyright to 4 spaces.
+  * Update FSF address.
 
  -- Guillem Jover <guillem@debian.org>  Mon,  7 Aug 2006 14:26:46 +0300
 
