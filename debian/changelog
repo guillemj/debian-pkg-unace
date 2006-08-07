@@ -5,6 +5,7 @@ unace (1.2b-4) UNRELEASED; urgency=low
   * Lower-case the manpage title.
   * Reindent debian/copyright to 4 spaces.
   * Update FSF address.
+  * Use dh_install instead of using INSTALL_PROGRAM.
 
  -- Guillem Jover <guillem@debian.org>  Mon,  7 Aug 2006 14:26:46 +0300
 
