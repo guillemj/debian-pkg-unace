@@ -33,7 +33,6 @@ build: patch debian/test-endian Makefile gccmaked
 clean: unpatch
 	dh_testdir
 	dh_testroot
-	rm -f configure-stamp
 	
 	-$(MAKE) clean
 	rm -f debian/test-endian
@@ -73,4 +72,6 @@ binary-arch: build install
 	dh_builddeb
 
 binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary install configure
+
+.PHONY: build clean binary-indep binary-arch binary install
+
