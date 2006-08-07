@@ -29,9 +29,9 @@ DEB_SRCDIR ?= .
 DEB_PATCHDIRS = debian/patches
 DEB_PATCHES = $(foreach dir,$(DEB_PATCHDIRS),$(shell LC_COLLATE=C echo $(wildcard $(dir)/*.patch) $(wildcard $(dir)/*.diff)))
 
-patch:: apply-patches
+patch: apply-patches
 
-clean:: reverse-patches
+unpatch: reverse-patches
 	rm -f debian/stamp-patch*
 	rm -f debian/patches/*.log
 
@@ -91,5 +91,5 @@ debian/stamp-patched reverse-patches:
 	done
 	if [ "$@" = "debian/stamp-patched" ]; then touch debian/stamp-patched; fi
 
-.PHONY: patch clean apply-patches reverse-patches
+.PHONY: patch unpatch apply-patches reverse-patches
 

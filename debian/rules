@@ -31,7 +31,7 @@ build: patch configure-stamp
 	$(MAKE) dep CFLAGS="$(CFLAGS) -D$(shell debian/test-endian)"
 	$(MAKE) CFLAGS="$(CFLAGS) -D$(shell debian/test-endian)"
 
-clean::
+clean: unpatch
 	dh_testdir
 	dh_testroot
 	rm -f configure-stamp
