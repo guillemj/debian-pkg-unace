@@ -6,6 +6,9 @@ unace (1.2b-4) UNRELEASED; urgency=low
   * Reindent debian/copyright to 4 spaces.
   * Update FSF address.
   * Use dh_install instead of using INSTALL_PROGRAM.
+  * Clean up debian/rules:
+    - Remove unused commented debhelper commands.
+    - Do not use a build stamp.
 
  -- Guillem Jover <guillem@debian.org>  Mon,  7 Aug 2006 14:26:46 +0300
 

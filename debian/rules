@@ -25,20 +25,16 @@ configure-stamp: debian/test-endian
 	
 	touch configure-stamp
 
-build: build-stamp
-
-build-stamp: patch configure-stamp
+build: patch configure-stamp
 	dh_testdir
 	
 	$(MAKE) dep CFLAGS="$(CFLAGS) -D$(shell debian/test-endian)"
 	$(MAKE) CFLAGS="$(CFLAGS) -D$(shell debian/test-endian)"
-	
-	touch build-stamp
 
 clean::
 	dh_testdir
 	dh_testroot
-	rm -f build-stamp configure-stamp
+	rm -f configure-stamp
 	
 	-$(MAKE) clean
 	rm -f debian/test-endian
@@ -66,23 +62,11 @@ binary-arch: build install
 	dh_installchangelogs changes.log
 	dh_installdocs
 	dh_installexamples
-#	dh_installmenu
-#	dh_installdebconf
-#	dh_installlogrotate
-#	dh_installemacsen
-#	dh_installpam
-#	dh_installmime
-#	dh_installinit
-#	dh_installcron
-#	dh_installinfo
 	dh_installman
 	dh_link
 	dh_strip
 	dh_compress
 	dh_fixperms
-#	dh_perl
-#	dh_python
-#	dh_makeshlibs
 	dh_installdeb
 	dh_shlibdeps
 	dh_gencontrol
