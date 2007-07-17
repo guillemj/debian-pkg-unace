@@ -9,6 +9,9 @@ unace (1.2b-4) UNRELEASED; urgency=low
     - debian/patches/001_cpp_define.patch: Rediff.
     - debian/patches/002_fix_warnings.patch: Likewise.
     - debian/patches/003_security.patch: Likewise. Remove .orig duplicate.
+  * Make the program 64 bit clean, by using <stdint.h> to typedef the data
+    types independently of the target system. (Closes: #431380)
+   - debian/patches/004_64_bit_clean.patch: New file.
 
  -- Guillem Jover <guillem@debian.org>  Tue, 17 Jul 2007 05:55:25 +0300
 
