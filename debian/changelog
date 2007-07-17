@@ -1,4 +1,4 @@
-unace (1.2b-4) UNRELEASED; urgency=low
+unace (1.2b-5) unstable; urgency=low
 
   * Switched to quilt:
     - Add new debian/patches/series file.
@@ -14,7 +14,7 @@ unace (1.2b-4) UNRELEASED; urgency=low
    - debian/patches/004_64_bit_clean.patch: New file.
   * Do not ignore errors from from 'make clean' on the clean target.
 
- -- Guillem Jover <guillem@debian.org>  Tue, 17 Jul 2007 05:55:25 +0300
+ -- Guillem Jover <guillem@debian.org>  Tue, 17 Jul 2007 09:29:11 +0300
 
 unace (1.2b-4) unstable; urgency=low
 
