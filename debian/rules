@@ -14,7 +14,7 @@ else
 	CFLAGS += -O2
 endif
 
-include debian/patch.mk
+include /usr/share/quilt/quilt.make
 
 Makefile: unix/makefile
 	dh_testdir
