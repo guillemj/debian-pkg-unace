@@ -1,7 +1,7 @@
-#DPATCHLEVEL=1
-diff -Naur unace-1.2b.orig/unix/makefile unace-1.2b/unix/makefile
---- unace-1.2b.orig/unix/makefile	2002-08-24 01:17:20.000000000 +0200
-+++ unace-1.2b/unix/makefile	2004-02-04 10:04:55.000000000 +0100
+Index: unix/makefile
+===================================================================
+--- unix/makefile.orig	2007-07-17 08:22:35.000000000 +0300
++++ unix/makefile	2007-07-17 08:22:39.000000000 +0300
 @@ -10,26 +10,28 @@
  OBJ = globals.o uac_comm.o uac_crc.o uac_crt.o uac_dcpr.o uac_sys.o unace.o
  SRC = globals.c uac_comm.c uac_crc.c uac_crt.c uac_dcpr.c uac_sys.c unace.c

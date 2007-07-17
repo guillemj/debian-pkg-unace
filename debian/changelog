@@ -5,6 +5,10 @@ unace (1.2b-4) UNRELEASED; urgency=low
     - Add Build-Depends on 'quilt (>= 0.40)'.
     - Include quilt.make from debian/rules.
     - Remove now unused debian/patch.mk.
+  * Clean up patches:
+    - debian/patches/001_cpp_define.patch: Rediff.
+    - debian/patches/002_fix_warnings.patch: Likewise.
+    - debian/patches/003_security.patch: Likewise. Remove .orig duplicate.
 
  -- Guillem Jover <guillem@debian.org>  Tue, 17 Jul 2007 05:55:25 +0300
 
