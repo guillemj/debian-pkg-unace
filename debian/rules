@@ -34,7 +34,7 @@ clean: unpatch
 	dh_testdir
 	dh_testroot
 	
-	-$(MAKE) clean
+	[ ! -f Makefile ] || $(MAKE) clean
 	rm -f debian/test-endian
 	rm -f Makefile gccmaked
 	

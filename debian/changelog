@@ -12,6 +12,7 @@ unace (1.2b-4) UNRELEASED; urgency=low
   * Make the program 64 bit clean, by using <stdint.h> to typedef the data
     types independently of the target system. (Closes: #431380)
    - debian/patches/004_64_bit_clean.patch: New file.
+  * Do not ignore errors from from 'make clean' on the clean target.
 
  -- Guillem Jover <guillem@debian.org>  Tue, 17 Jul 2007 05:55:25 +0300
 
