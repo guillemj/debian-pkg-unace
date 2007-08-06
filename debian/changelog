@@ -1,10 +1,10 @@
-unace (1.2b-4etch1) UNRELEASED; urgency=low
+unace (1.2b-4etch1) stable; urgency=low
 
   * Make the program 64 bit clean, by using <stdint.h> to typedef the data
     types independently of the target system. (Closes: #431380)
     - debian/patches/004_64_bit_clean.patch: New file.
 
- -- Guillem Jover <guillem@debian.org>  Thu, 02 Aug 2007 05:28:03 +0300
+ -- Guillem Jover <guillem@debian.org>  Thu, 02 Aug 2007 05:51:39 +0300
 
 unace (1.2b-4) unstable; urgency=low
 
