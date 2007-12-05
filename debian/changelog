@@ -4,6 +4,7 @@ unace (1.2b-6) UNRELEASED; urgency=low
   * Fix debian/rules dependencies to play nice with parallel builds.
     - Change binary-arch and binary-indep to stop depending on build.
     - Move patch dependency to unix/makefile.
+  * Now using Standards-Version 3.7.3 (no changes needed).
 
  -- Guillem Jover <guillem@debian.org>  Wed, 05 Dec 2007 06:17:02 +0200
 
