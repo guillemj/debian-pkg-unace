@@ -1,6 +1,9 @@
 unace (1.2b-6) UNRELEASED; urgency=low
 
   * Add Vcs-Browser and Vcs-Svn fields.
+  * Fix debian/rules dependencies to play nice with parallel builds.
+    - Change binary-arch and binary-indep to stop depending on build.
+    - Move patch dependency to unix/makefile.
 
  -- Guillem Jover <guillem@debian.org>  Wed, 05 Dec 2007 06:17:02 +0200
 

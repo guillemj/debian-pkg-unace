@@ -16,6 +16,9 @@ endif
 
 include /usr/share/quilt/quilt.make
 
+# XXX: Can be moved back to build: once this file does not need patching
+unix/makefile: patch
+
 Makefile: unix/makefile
 	dh_testdir
 	cp -f $^ $@
@@ -24,7 +27,7 @@ gccmaked: unix/gccmaked
 	dh_testdir
 	cp -f $^ $@
 
-build: patch debian/test-endian Makefile gccmaked
+build: debian/test-endian Makefile gccmaked
 	dh_testdir
 	
 	$(MAKE) dep CFLAGS="$(CFLAGS) -D$(shell debian/test-endian)"
@@ -50,11 +53,11 @@ install: build
 	dh_install
 
 # Build architecture-independent files here.
-binary-indep: build install
+binary-indep: install
 # Nothing to do.
 
 # Build architecture-dependent files here.
-binary-arch: build install
+binary-arch: install
 	dh_testdir
 	dh_testroot
 	dh_installchangelogs changes.log
