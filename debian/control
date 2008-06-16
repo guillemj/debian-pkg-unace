@@ -3,8 +3,8 @@ Section: utils
 Priority: optional
 Maintainer: Guillem Jover <guillem@debian.org>
 Build-Depends: debhelper (>= 5), quilt (>= 0.40)
-Vcs-Browser: http://svn.debian.org/wsvn/pkg-unace/
-Vcs-Svn: svn://svn.debian.org/pkg-unace/trunk/
+Vcs-Browser: http://git.hadrons.org/?p=debian/pkgs/unace.git
+Vcs-Git: git://git.hadrons.org/git/debian/pkgs/unace.git
 Standards-Version: 3.7.3
 
 Package: unace
