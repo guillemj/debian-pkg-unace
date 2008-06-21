@@ -1,7 +1,7 @@
-Index: uac_dcpr.c
+Index: b/uac_dcpr.c
 ===================================================================
---- uac_dcpr.c.orig	2007-07-17 08:22:35.000000000 +0300
-+++ uac_dcpr.c	2007-07-17 08:22:44.000000000 +0300
+--- a/uac_dcpr.c
++++ b/uac_dcpr.c
 @@ -67,6 +67,7 @@ void sortrange(INT left, INT right)
  
     //sort partial ranges - when very small, sort directly

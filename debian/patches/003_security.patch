@@ -1,7 +1,7 @@
-Index: uac_crt.c
+Index: b/uac_crt.c
 ===================================================================
---- uac_crt.c.orig	2004-01-30 00:12:42.000000000 +0200
-+++ uac_crt.c	2007-07-17 08:20:58.000000000 +0300
+--- a/uac_crt.c
++++ b/uac_crt.c
 @@ -35,12 +35,15 @@
  
  /* gets file name from header
@@ -96,10 +96,10 @@ Index: uac_crt.c
           strncpy(d, f, i);
           d[i] = 0;
        }
-Index: uac_crt.h
+Index: b/uac_crt.h
 ===================================================================
---- uac_crt.h.orig	2004-01-30 00:15:32.000000000 +0200
-+++ uac_crt.h	2007-07-17 08:20:58.000000000 +0300
+--- a/uac_crt.h
++++ b/uac_crt.h
 @@ -8,7 +8,7 @@
  
  #include "acestruc.h"
@@ -109,10 +109,10 @@ Index: uac_crt.h
  INT  create_dest_file(CHAR * file, INT a);
  
  #ifdef UNIX
-Index: unace.c
+Index: b/unace.c
 ===================================================================
---- unace.c.orig	2004-01-30 00:13:00.000000000 +0200
-+++ unace.c	2007-07-17 08:20:58.000000000 +0300
+--- a/unace.c
++++ b/unace.c
 @@ -242,6 +242,7 @@ INT read_arc_head(void)         // searc
  INT  open_archive(INT print_err)        // opens archive (or volume)
  {

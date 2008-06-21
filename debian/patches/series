@@ -1,4 +1,4 @@
-001_cpp_define.patch -p0
-002_fix_warnings.patch -p0
-003_security.patch -p0
-004_64_bit_clean.patch -p0
+001_cpp_define.patch
+002_fix_warnings.patch
+003_security.patch
+004_64_bit_clean.patch

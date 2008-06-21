@@ -6,6 +6,7 @@ unace (1.2b-7) UNRELEASED; urgency=low
   * Cleanup debian/copyright:
     - Change 'Upstream Author' to 'Copyright Holder'.
     - Add missing copyright years and use UTF-8 copyright symbol.
+  * Refresh patches with -pab. (Closes: #485261)
 
  -- Guillem Jover <guillem@debian.org>  Mon, 16 Jun 2008 09:19:10 +0300
 
