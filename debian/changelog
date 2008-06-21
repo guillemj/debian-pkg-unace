@@ -3,6 +3,9 @@ unace (1.2b-7) UNRELEASED; urgency=low
   * Update packaging Vcs fields to the new URL.
   * Add a debian/README.source file.
   * Now using Standards-Version 3.8.0.
+  * Cleanup debian/copyright:
+    - Change 'Upstream Author' to 'Copyright Holder'.
+    - Add missing copyright years and use UTF-8 copyright symbol.
 
  -- Guillem Jover <guillem@debian.org>  Mon, 16 Jun 2008 09:19:10 +0300
 
