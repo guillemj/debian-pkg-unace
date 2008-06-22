@@ -1,4 +1,4 @@
-unace (1.2b-7) UNRELEASED; urgency=low
+unace (1.2b-7) unstable; urgency=low
 
   * Update packaging Vcs fields to the new URL.
   * Add a debian/README.source file.
@@ -9,7 +9,7 @@ unace (1.2b-7) UNRELEASED; urgency=low
     - Refer to GPL-2 from common-licenses instead of just GPL.
   * Refresh patches with -pab. (Closes: #485261)
 
- -- Guillem Jover <guillem@debian.org>  Mon, 16 Jun 2008 09:19:10 +0300
+ -- Guillem Jover <guillem@debian.org>  Sun, 22 Jun 2008 07:53:40 +0300
 
 unace (1.2b-6) unstable; urgency=low
 
