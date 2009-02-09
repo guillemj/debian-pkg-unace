@@ -2,7 +2,7 @@ Source: unace
 Section: utils
 Priority: optional
 Maintainer: Guillem Jover <guillem@debian.org>
-Build-Depends: debhelper (>= 5), quilt (>= 0.40)
+Build-Depends: debhelper (>= 7), quilt (>= 0.40)
 Vcs-Browser: http://git.hadrons.org/?p=debian/pkgs/unace.git
 Vcs-Git: git://git.hadrons.org/git/debian/pkgs/unace.git
 Standards-Version: 3.8.0

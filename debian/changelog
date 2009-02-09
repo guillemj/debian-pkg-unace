@@ -1,3 +1,9 @@
+unace (1.2b-8) UNRELEASED; urgency=low
+
+  * Switch to debhelper compatibility level 7.
+
+ -- Guillem Jover <guillem@debian.org>  Mon, 09 Feb 2009 22:09:25 +0200
+
 unace (1.2b-7) unstable; urgency=low
 
   * Update packaging Vcs fields to the new URL.
