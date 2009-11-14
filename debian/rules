@@ -12,11 +12,6 @@ else
 	CFLAGS += -O2
 endif
 
-include /usr/share/quilt/quilt.make
-
-# XXX: Can be moved back to build: once this file does not need patching
-unix/makefile: patch
-
 Makefile: unix/makefile
 	dh_testdir
 	cp -f $^ $@
@@ -31,7 +26,7 @@ build: debian/test-endian Makefile gccmaked
 	$(MAKE) dep CFLAGS="$(CFLAGS) -D$(shell debian/test-endian)"
 	$(MAKE) CFLAGS="$(CFLAGS) -D$(shell debian/test-endian)"
 
-clean: unpatch
+clean:
 	dh_testdir
 	dh_testroot
 	
