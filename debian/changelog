@@ -1,4 +1,4 @@
-unace (1.2b-8) UNRELEASED; urgency=low
+unace (1.2b-8) unstable; urgency=low
 
   * Switch to debhelper compatibility level 7.
   * Use dh_prep instead of “dh_clean -k”.
@@ -11,7 +11,7 @@ unace (1.2b-8) UNRELEASED; urgency=low
     - Remove patch and unpatch targets from debian/rules.
     - Remove now unneeded debian/README.source.
 
- -- Guillem Jover <guillem@debian.org>  Mon, 09 Feb 2009 22:09:25 +0200
+ -- Guillem Jover <guillem@debian.org>  Wed, 02 Dec 2009 22:36:40 +0100
 
 unace (1.2b-7) unstable; urgency=low
 
