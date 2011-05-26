@@ -1,3 +1,9 @@
+unace (1.2b-9) UNRELEASED; urgency=low
+
+  * Now using Standards-Version 3.9.2 (no changes needed).
+
+ -- Guillem Jover <guillem@debian.org>  Fri, 27 May 2011 01:54:41 +0200
+
 unace (1.2b-8) unstable; urgency=low
 
   * Switch to debhelper compatibility level 7.
