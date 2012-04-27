@@ -1,3 +1,13 @@
+unace (1.2b-10) UNRELEASED; urgency=low
+
+  * Rework debian/rules targets:
+    - Remove install dependency from binary-indep.
+    - Rename build to build-arch.
+    - Rename install to install-arch.
+    - Add new build and build-indep targets.
+
+ -- Guillem Jover <guillem@debian.org>  Fri, 27 Apr 2012 02:37:07 +0200
+
 unace (1.2b-9) unstable; urgency=low
 
   * Now using Standards-Version 3.9.2 (no changes needed).

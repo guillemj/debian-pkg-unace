@@ -20,11 +20,17 @@ gccmaked: unix/gccmaked
 	dh_testdir
 	cp -f $^ $@
 
-build: debian/test-endian Makefile gccmaked
+build-indep:
+
+build-arch: debian/test-endian Makefile gccmaked
 	dh_testdir
 	
 	$(MAKE) dep CFLAGS="$(CFLAGS) -D$(shell debian/test-endian)"
 	$(MAKE) CFLAGS="$(CFLAGS) -D$(shell debian/test-endian)"
+
+build: build-indep build-arch
+
+.PHONY: build-indep build-arch build
 
 clean:
 	dh_testdir
@@ -36,7 +42,7 @@ clean:
 	
 	dh_clean
 
-install: build
+install-arch: build-arch
 	dh_testdir
 	dh_testroot
 	dh_prep
@@ -45,12 +51,14 @@ install: build
 	#$(MAKE) install DESTDIR=$(CURDIR)/debian/unace
 	dh_install
 
+.PHONY: install-arch clean
+
 # Build architecture-independent files here.
-binary-indep: install
+binary-indep:
 # Nothing to do.
 
 # Build architecture-dependent files here.
-binary-arch: install
+binary-arch: install-arch
 	dh_testdir
 	dh_testroot
 	dh_installchangelogs changes.log
@@ -69,4 +77,4 @@ binary-arch: install
 
 binary: binary-indep binary-arch
 
-.PHONY: build clean binary-indep binary-arch binary install
+.PHONY: binary-indep binary-arch binary
