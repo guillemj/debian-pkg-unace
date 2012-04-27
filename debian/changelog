@@ -5,6 +5,7 @@ unace (1.2b-10) UNRELEASED; urgency=low
     - Rename build to build-arch.
     - Rename install to install-arch.
     - Add new build and build-indep targets.
+  * Now using Standards-Version 3.9.3.
 
  -- Guillem Jover <guillem@debian.org>  Fri, 27 Apr 2012 02:37:07 +0200
 
