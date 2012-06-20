@@ -6,7 +6,7 @@
 
 DEB_HOST_ARCH_ENDIAN := $(shell dpkg-architecture -qDEB_HOST_ARCH_ENDIAN)
 
-CPPFLAGS =
+CPPFLAGS = $(shell dpkg-buildflags --get CPPFLAGS) -DUNIX -DCASEINSENSE
 ifeq ($(DEB_HOST_ARCH_ENDIAN),little)
 CPPFLAGS += -DLO_HI_BYTE_ORDER
 else ifeq ($(DEB_HOST_ARCH_ENDIAN),big)
@@ -14,14 +14,8 @@ CPPFLAGS += -DHI_LO_BYTE_ORDER
 else
 $(error "unknown endian")
 endif
-
-CFLAGS = -Wall -g
-
-ifneq (,$(filter noopt,$(DEB_BUILD_OPTIONS)))
-	CFLAGS += -O0
-else
-	CFLAGS += -O2
-endif
+CFLAGS = $(shell dpkg-buildflags --get CFLAGS) -Wall
+LDFLAGS = $(shell dpkg-buildflags --get LDFLAGS)
 
 Makefile: unix/makefile
 	dh_testdir
@@ -36,8 +30,8 @@ build-indep:
 build-arch: Makefile gccmaked
 	dh_testdir
 	
-	$(MAKE) dep CFLAGS="$(CFLAGS) $(CPPFLAGS)"
-	$(MAKE) CFLAGS="$(CFLAGS) $(CPPFLAGS)"
+	$(MAKE) dep CPPFLAGS="$(CPPFLAGS)"
+	$(MAKE) CPPFLAGS="$(CPPFLAGS)" CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)"
 
 build: build-indep build-arch
 

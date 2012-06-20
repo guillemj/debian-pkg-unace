@@ -10,6 +10,7 @@ unace (1.2b-10) UNRELEASED; urgency=low
   * Fix format-security build failures.
   * Use «dpkg-architecture -qDEB_HOST_ARCH_ENDIAN» instead of building a test
     program to detect the host architecture endianness.
+  * Use dpkg-buildflags to set CPPFLAGS, CFLAGS and LDFLAGS.
 
  -- Guillem Jover <guillem@debian.org>  Fri, 27 Apr 2012 02:37:07 +0200
 

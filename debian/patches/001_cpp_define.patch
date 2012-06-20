@@ -1,5 +1,7 @@
-Index: b/unix/makefile
-===================================================================
+---
+ unix/makefile |   19 ++++++++++---------
+ 1 file changed, 10 insertions(+), 9 deletions(-)
+
 --- a/unix/makefile
 +++ b/unix/makefile
 @@ -10,26 +10,28 @@
@@ -15,7 +17,7 @@ Index: b/unix/makefile
  #CFLAGS = -g -Wall -DMDEBUG
  #CFLAGS = -O3 -fno-strength-reduce -fomit-frame-pointer # These are for Linux
 -CFLAGS = -O -g -Wall -dLO_HI_BYTE_ORDER
-+CFLAGS = -O -g -Wall -DLO_HI_BYTE_ORDER
++CFLAGS = -O -g -Wall
  CHALLOC = challoc.o
  CHALLOC =
  CHNEW = chnew.o challoc.o
@@ -25,15 +27,33 @@ Index: b/unix/makefile
 +
  ifeq ($(OSTYPE), Linux)
 -CFLAGS += -DUNIX -DCASEINSENSE
-+override CFLAGS += -DUNIX -DCASEINSENSE
++CPPFLAGS += -DUNIX -DCASEINSENSE
  else
  ifeq ($(OSTYPE), DOS)
  EXEEXT = .exe
 -CFLAGS += -DDOS
-+override CFLAGS += -DDOS
++CPPFLAGS += -DDOS
  else
 -CFLAGS += -DUNIX -DCASEINSENSE
-+override CFLAGS += -DUNIX -DCASEINSENSE
++CPPFLAGS += -DUNIX -DCASEINSENSE
  endif
  endif
  
+@@ -37,15 +39,14 @@ endif
+ #LIBS = -lm
+ 
+ 
+-unace$(EXEEXT): $(OBJ) $(CHALLOC)
+-	gcc $(CFLAGS) -o $@ $^ $(LIBS)
++unace$(EXEEXT): $(OBJ) $(CHALLOC) $(LIBS)
+ 
+ clean:
+ 	rm -f *.o a.out core unace unace.exe
+ 
+ dep:
+ 	chmod a+rx ./gccmaked
+-	./gccmaked -- $(CFLAGS) -- *.c*
++	./gccmaked -- $(CPPFLAGS) -- *.c*
+ 	rm -f ?akefile.bak
+ 
+ # DO NOT DELETE
