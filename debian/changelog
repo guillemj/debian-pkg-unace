@@ -1,4 +1,4 @@
-unace (1.2b-10) UNRELEASED; urgency=low
+unace (1.2b-10) unstable; urgency=low
 
   * Rework debian/rules targets:
     - Remove install dependency from binary-indep.
@@ -12,7 +12,7 @@ unace (1.2b-10) UNRELEASED; urgency=low
     program to detect the host architecture endianness.
   * Use dpkg-buildflags to set CPPFLAGS, CFLAGS and LDFLAGS.
 
- -- Guillem Jover <guillem@debian.org>  Fri, 27 Apr 2012 02:37:07 +0200
+ -- Guillem Jover <guillem@debian.org>  Wed, 20 Jun 2012 10:57:02 +0200
 
 unace (1.2b-9) unstable; urgency=low
 
