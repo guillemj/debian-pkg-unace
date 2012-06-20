@@ -4,6 +4,17 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
+DEB_HOST_ARCH_ENDIAN := $(shell dpkg-architecture -qDEB_HOST_ARCH_ENDIAN)
+
+CPPFLAGS =
+ifeq ($(DEB_HOST_ARCH_ENDIAN),little)
+CPPFLAGS += -DLO_HI_BYTE_ORDER
+else ifeq ($(DEB_HOST_ARCH_ENDIAN),big)
+CPPFLAGS += -DHI_LO_BYTE_ORDER
+else
+$(error "unknown endian")
+endif
+
 CFLAGS = -Wall -g
 
 ifneq (,$(filter noopt,$(DEB_BUILD_OPTIONS)))
@@ -22,11 +33,11 @@ gccmaked: unix/gccmaked
 
 build-indep:
 
-build-arch: debian/test-endian Makefile gccmaked
+build-arch: Makefile gccmaked
 	dh_testdir
 	
-	$(MAKE) dep CFLAGS="$(CFLAGS) -D$(shell debian/test-endian)"
-	$(MAKE) CFLAGS="$(CFLAGS) -D$(shell debian/test-endian)"
+	$(MAKE) dep CFLAGS="$(CFLAGS) $(CPPFLAGS)"
+	$(MAKE) CFLAGS="$(CFLAGS) $(CPPFLAGS)"
 
 build: build-indep build-arch
 
@@ -37,7 +48,6 @@ clean:
 	dh_testroot
 	
 	[ ! -f Makefile ] || $(MAKE) clean
-	rm -f debian/test-endian
 	rm -f Makefile gccmaked
 	
 	dh_clean

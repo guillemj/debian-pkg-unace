@@ -8,6 +8,8 @@ unace (1.2b-10) UNRELEASED; urgency=low
   * Now using Standards-Version 3.9.3.
   * Add empty debian/watch documenting where the original source came from.
   * Fix format-security build failures.
+  * Use «dpkg-architecture -qDEB_HOST_ARCH_ENDIAN» instead of building a test
+    program to detect the host architecture endianness.
 
  -- Guillem Jover <guillem@debian.org>  Fri, 27 Apr 2012 02:37:07 +0200
 
