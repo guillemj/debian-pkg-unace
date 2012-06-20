@@ -2,3 +2,4 @@
 002_fix_warnings.patch
 003_security.patch
 004_64_bit_clean.patch
+005_format-security.patch
