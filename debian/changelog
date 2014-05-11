@@ -2,6 +2,7 @@ unace (1.2b-11) UNRELEASED; urgency=low
 
   * Now using Standards-Version 3.9.5 (no changes needed).
   * Remove package creation information from debian/copyright.
+  * Switch debian/copyright to machine-readable format 1.0.
 
  -- Guillem Jover <guillem@debian.org>  Wed, 15 May 2013 19:52:56 +0200
 
