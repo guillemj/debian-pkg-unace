@@ -1,3 +1,10 @@
+unace (1.2b-12) UNRELEASED; urgency=low
+
+  * Fix buffer overflow when reading ace files with file headers smaller
+    than expected. Fixes CVE-2015-2063. (Closes: #775003)
+
+ -- Guillem Jover <guillem@debian.org>  Tue, 24 Feb 2015 10:38:41 +0100
+
 unace (1.2b-11) unstable; urgency=medium
 
   * Now using Standards-Version 3.9.5 (no changes needed).
