@@ -1,5 +1,6 @@
 *.tgz
 *.tar.gz
+*.tar.xz
 *.diff.gz
 *.dsc
 *.debdiff
