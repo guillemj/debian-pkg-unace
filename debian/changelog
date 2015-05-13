@@ -3,6 +3,7 @@ unace (1.2b-13) UNRELEASED; urgency=low
   * Use https for the copyright Format URL.
   * Switch Vcs-Browser to a cgit URL.
   * Now using Standards-Version 3.9.6 (no changes needed).
+  * Move local filesystem location of GPL to a Comment: copyright section.
 
  -- Guillem Jover <guillem@debian.org>  Sat, 02 May 2015 01:31:28 +0200
 
