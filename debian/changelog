@@ -1,4 +1,4 @@
-unace (1.2b-13) UNRELEASED; urgency=low
+unace (1.2b-13) unstable; urgency=low
 
   * Use https for the copyright Format URL.
   * Switch Vcs-Browser to a cgit URL.
@@ -7,7 +7,7 @@ unace (1.2b-13) UNRELEASED; urgency=low
   * Move AUTHOR section in man page to a comment header.
   * Update SEE ALSO in man page. Remove ppmd(1), and add xz(1) and unrar(1).
 
- -- Guillem Jover <guillem@debian.org>  Sat, 02 May 2015 01:31:28 +0200
+ -- Guillem Jover <guillem@debian.org>  Wed, 13 May 2015 03:56:11 +0200
 
 unace (1.2b-12) unstable; urgency=high
 
