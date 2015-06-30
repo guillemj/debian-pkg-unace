@@ -14,8 +14,8 @@ CPPFLAGS += -DHI_LO_BYTE_ORDER
 else
 $(error "unknown endian")
 endif
-CFLAGS = $(shell dpkg-buildflags --get CFLAGS) -Wall
-LDFLAGS = $(shell dpkg-buildflags --get LDFLAGS)
+CFLAGS = $(shell dpkg-buildflags --get CFLAGS) $(shell getconf LFS_CFLAGS) -Wall
+LDFLAGS = $(shell dpkg-buildflags --get LDFLAGS) $(shell getconf LFS_LDFLAGS)
 
 Makefile: unix/makefile
 	dh_testdir
