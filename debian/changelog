@@ -1,8 +1,8 @@
-unace (1.2b-14) UNRELEASED; urgency=low
+unace (1.2b-14) unstable; urgency=low
 
   * Enable LFS, using getconf to pass the correct build flags.
 
- -- Guillem Jover <guillem@debian.org>  Tue, 30 Jun 2015 22:37:44 +0200
+ -- Guillem Jover <guillem@debian.org>  Tue, 11 Aug 2015 04:30:18 +0200
 
 unace (1.2b-13) unstable; urgency=low
 
