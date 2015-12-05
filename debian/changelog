@@ -1,3 +1,9 @@
+unace (1.2b-15) UNRELEASED; urgency=medium
+
+  * Use https for hadrons.org URLs.
+
+ -- Guillem Jover <guillem@debian.org>  Sat, 05 Dec 2015 16:48:53 +0100
+
 unace (1.2b-14) unstable; urgency=low
 
   * Enable LFS, using getconf to pass the correct build flags.
