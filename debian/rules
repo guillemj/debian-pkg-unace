@@ -4,9 +4,12 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-DEB_HOST_ARCH_ENDIAN := $(shell dpkg-architecture -qDEB_HOST_ARCH_ENDIAN)
+DEB_CPPFLAGS_MAINT_APPEND = -DUNIX -DCASEINSENSE
+DEB_CFLAGS_MAINT_APPEND = $(shell getconf LFS_CFLAGS) -Wall
+DEB_LDFLAGS_MAINT_APPEND = $(shell getconf LFS_LDFLAGS)
 
-CPPFLAGS = $(shell dpkg-buildflags --get CPPFLAGS) -DUNIX -DCASEINSENSE
+include /usr/share/dpkg/default.mk
+
 ifeq ($(DEB_HOST_ARCH_ENDIAN),little)
 CPPFLAGS += -DLO_HI_BYTE_ORDER
 else ifeq ($(DEB_HOST_ARCH_ENDIAN),big)
@@ -14,8 +17,6 @@ CPPFLAGS += -DHI_LO_BYTE_ORDER
 else
 $(error "unknown endian")
 endif
-CFLAGS = $(shell dpkg-buildflags --get CFLAGS) $(shell getconf LFS_CFLAGS) -Wall
-LDFLAGS = $(shell dpkg-buildflags --get LDFLAGS) $(shell getconf LFS_LDFLAGS)
 
 Makefile: unix/makefile
 	dh_testdir
