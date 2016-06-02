@@ -4,6 +4,7 @@ unace (1.2b-15) UNRELEASED; urgency=medium
   * Bump Standards-Version to 3.9.8 (no changes needed).
   * Add metadata to the patches.
   * Switch to the dpkg makefile fragments in debian/rules.
+  * Enable all hardening flags.
 
  -- Guillem Jover <guillem@debian.org>  Sat, 05 Dec 2015 16:48:53 +0100
 

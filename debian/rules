@@ -4,6 +4,7 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
+DEB_BUILD_MAINT_OPTIONS = hardening=+all
 DEB_CPPFLAGS_MAINT_APPEND = -DUNIX -DCASEINSENSE
 DEB_CFLAGS_MAINT_APPEND = $(shell getconf LFS_CFLAGS) -Wall
 DEB_LDFLAGS_MAINT_APPEND = $(shell getconf LFS_LDFLAGS)
