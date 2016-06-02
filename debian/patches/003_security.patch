@@ -1,3 +1,9 @@
+Description: Fix compilations warnings
+Author: Ulf Härnhammar <Ulf.Harnhammar.9485@student.uu.se>
+Origin: vendor
+Forwarded: no
+
+
 Index: b/uac_crt.c
 ===================================================================
 --- a/uac_crt.c

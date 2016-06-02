@@ -2,6 +2,7 @@ unace (1.2b-15) UNRELEASED; urgency=medium
 
   * Use https for hadrons.org URLs.
   * Bump Standards-Version to 3.9.8 (no changes needed).
+  * Add metadata to the patches.
 
  -- Guillem Jover <guillem@debian.org>  Sat, 05 Dec 2015 16:48:53 +0100
 

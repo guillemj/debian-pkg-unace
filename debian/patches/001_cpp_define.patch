@@ -1,3 +1,9 @@
+Description: Fix compilations flags
+Author: Guillem Jover <guillem@hadrons.org>
+Origin: vendor
+Forwarded: no
+
+
 ---
  unix/makefile |   19 ++++++++++---------
  1 file changed, 10 insertions(+), 9 deletions(-)

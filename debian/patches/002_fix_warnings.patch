@@ -1,3 +1,9 @@
+Description: Fix compilations warnings
+Author: Guillem Jover <guillem@hadrons.org>
+Origin: vendor
+Forwarded: no
+
+
 Index: b/uac_dcpr.c
 ===================================================================
 --- a/uac_dcpr.c
