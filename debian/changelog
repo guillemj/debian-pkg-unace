@@ -1,4 +1,4 @@
-unace (1.2b-15) UNRELEASED; urgency=medium
+unace (1.2b-15) unstable; urgency=medium
 
   * Use https for hadrons.org URLs.
   * Bump Standards-Version to 3.9.8 (no changes needed).
@@ -6,7 +6,7 @@ unace (1.2b-15) UNRELEASED; urgency=medium
   * Switch to the dpkg makefile fragments in debian/rules.
   * Enable all hardening flags.
 
- -- Guillem Jover <guillem@debian.org>  Sat, 05 Dec 2015 16:48:53 +0100
+ -- Guillem Jover <guillem@debian.org>  Fri, 03 Jun 2016 01:04:19 +0200
 
 unace (1.2b-14) unstable; urgency=low
 
