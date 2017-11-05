@@ -1,11 +1,11 @@
-unace (1.2b-16) UNRELEASED; urgency=medium
+unace (1.2b-16) unstable; urgency=medium
 
   * Switch to debhelper compatibility level 10.
   * Switch from broken getconf cross interface to future=+lfs build flags.
   * Set Rules-Requires-Root to no.
   * Bump Standards-Version to 4.1.1 (no changes needed).
 
- -- Guillem Jover <guillem@debian.org>  Sun, 05 Nov 2017 04:29:47 +0100
+ -- Guillem Jover <guillem@debian.org>  Sun, 05 Nov 2017 04:39:26 +0100
 
 unace (1.2b-15) unstable; urgency=medium
 
