@@ -5,6 +5,7 @@ Maintainer: Guillem Jover <guillem@debian.org>
 Vcs-Browser: https://git.hadrons.org/cgit/debian/pkgs/unace.git
 Vcs-Git: https://git.hadrons.org/git/debian/pkgs/unace.git
 Standards-Version: 3.9.8
+Rules-Requires-Root: no
 Build-Depends:
 # Needed for dpkg-buildflags future=+lfs.
  dpkg-dev (>= 1.19.0),
