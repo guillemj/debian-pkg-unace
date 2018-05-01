@@ -6,5 +6,6 @@
 *.debdiff
 *.deb
 *.build
+*.buildinfo
 *.changes
 *.upload
