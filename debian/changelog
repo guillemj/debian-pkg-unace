@@ -4,6 +4,7 @@ unace (1.2b-17) UNRELEASED; urgency=medium
   * Wrap and sort dependency fields.
   * Switch to debhelper compatibility level 11.
   * Bump Standards-Version to 4.3.0 (no changes needed).
+  * Fix unace(1) man page synopsis markup.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 07 Oct 2018 18:54:19 +0200
 
