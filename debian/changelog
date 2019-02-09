@@ -2,6 +2,7 @@ unace (1.2b-17) UNRELEASED; urgency=medium
 
   * Namespace debhelper files with package name.
   * Wrap and sort dependency fields.
+  * Switch to debhelper compatibility level 11.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 07 Oct 2018 18:54:19 +0200
 

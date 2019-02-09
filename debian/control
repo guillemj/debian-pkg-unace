@@ -9,7 +9,7 @@ Rules-Requires-Root: no
 Build-Depends:
 # Needed for dpkg-buildflags future=+lfs.
  dpkg-dev (>= 1.19.0),
- debhelper (>= 10),
+ debhelper (>= 11),
 
 Package: unace
 Architecture: any
