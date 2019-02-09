@@ -1,4 +1,4 @@
-unace (1.2b-17) UNRELEASED; urgency=medium
+unace (1.2b-17) unstable; urgency=medium
 
   * Namespace debhelper files with package name.
   * Wrap and sort dependency fields.
@@ -6,7 +6,7 @@ unace (1.2b-17) UNRELEASED; urgency=medium
   * Bump Standards-Version to 4.3.0 (no changes needed).
   * Fix unace(1) man page synopsis markup.
 
- -- Guillem Jover <guillem@debian.org>  Sun, 07 Oct 2018 18:54:19 +0200
+ -- Guillem Jover <guillem@debian.org>  Sat, 09 Feb 2019 18:29:42 +0100
 
 unace (1.2b-16) unstable; urgency=medium
 
