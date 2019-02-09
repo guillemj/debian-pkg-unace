@@ -1,3 +1,9 @@
+unace (1.2b-17) UNRELEASED; urgency=medium
+
+  * Namespace debhelper files with package name.
+
+ -- Guillem Jover <guillem@debian.org>  Sun, 07 Oct 2018 18:54:19 +0200
+
 unace (1.2b-16) unstable; urgency=medium
 
   * Switch to debhelper compatibility level 10.
