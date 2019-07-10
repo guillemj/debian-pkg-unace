@@ -1,6 +1,7 @@
 unace (1.2b-18) UNRELEASED; urgency=medium
 
   * Namespace debhelper README.Debian fragment file too.
+  * Remove unnecessary unace.dirs debhelper fragment file.
 
  -- Guillem Jover <guillem@debian.org>  Thu, 11 Jul 2019 01:28:26 +0200
 
