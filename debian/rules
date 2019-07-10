@@ -7,8 +7,10 @@
 DEB_BUILD_MAINT_OPTIONS = hardening=+all future=+lfs
 DEB_CPPFLAGS_MAINT_APPEND = -DUNIX -DCASEINSENSE
 DEB_CFLAGS_MAINT_APPEND = -Wall
+DPKG_EXPORT_BUILDTOOLS = yes
 
 include /usr/share/dpkg/default.mk
+include /usr/share/dpkg/buildtools.mk
 
 ifeq ($(DEB_HOST_ARCH_ENDIAN),little)
 CPPFLAGS += -DLO_HI_BYTE_ORDER
@@ -18,21 +20,13 @@ else
 $(error "unknown endian")
 endif
 
-Makefile: unix/makefile
-	dh_testdir
-	cp -f $^ $@
-
-gccmaked: unix/gccmaked
-	dh_testdir
-	cp -f $^ $@
-
 build-indep:
 
-build-arch: Makefile gccmaked
+build-arch:
 	dh_testdir
 	
-	$(MAKE) dep CPPFLAGS="$(CPPFLAGS)"
-	$(MAKE) CPPFLAGS="$(CPPFLAGS)" CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)"
+	$(MAKE) -f unix/makefile \
+	  CC=$(CC) CPPFLAGS="$(CPPFLAGS)" CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)"
 
 build: build-indep build-arch
 
@@ -42,8 +36,7 @@ clean:
 	dh_testdir
 	dh_testroot
 	
-	[ ! -f Makefile ] || $(MAKE) clean
-	rm -f Makefile gccmaked
+	$(MAKE) -f unix/makefile clean
 	
 	dh_clean
 
@@ -53,7 +46,7 @@ install-arch: build-arch
 	dh_prep
 	dh_installdirs
 	
-	#$(MAKE) install DESTDIR=$(CURDIR)/debian/unace
+	#$(MAKE) -f unix/makefile install DESTDIR=$(CURDIR)/debian/unace
 	dh_install
 
 .PHONY: install-arch clean

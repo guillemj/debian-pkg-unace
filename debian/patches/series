@@ -4,3 +4,4 @@
 004_64_bit_clean.patch
 005_format-security.patch
 006_security-afl.patch
+007_cross-compiling.patch

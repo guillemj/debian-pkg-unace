@@ -5,6 +5,14 @@ unace (1.2b-18) UNRELEASED; urgency=medium
   * Switch to debhelper compatibility level 12.
   * Switch from debian/compat to debhelper-commpat in Build-Depends.
   * Switch to Standards-Version 4.4.0 (no changes needed).
+  * Fix cross-compilation support:
+    - Stop using gccmaked which does not support cross-building, and instead
+      move the dependency information into a separate makefile.dep, which will
+      be created by a call to $(CPP) -MM directly in the upstream makefile.
+    - Stop symlinking on build and removing on clean both makefile and gccmaked
+      from the unix directory, and call the upstream makefile from there.
+    - We can now always call the upstream makefile unconditionally.
+    - Include dpkg's buildtools.mk and pass CC to the build system.
 
  -- Guillem Jover <guillem@debian.org>  Thu, 11 Jul 2019 01:28:26 +0200
 
