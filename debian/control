@@ -7,8 +7,6 @@ Vcs-Git: https://git.hadrons.org/git/debian/pkgs/unace.git
 Standards-Version: 4.5.1
 Rules-Requires-Root: no
 Build-Depends:
-# Needed for dpkg-buildflags future=+lfs.
- dpkg-dev (>= 1.19.0),
  debhelper-compat (= 13),
 
 Package: unace
