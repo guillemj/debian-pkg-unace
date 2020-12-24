@@ -1,0 +1,8 @@
+# There is no upstream support.
+unace: debian-watch-does-not-check-gpg-signature
+unace: maintainer-manual-page
+unace: no-homepage-field
+unace: patch-not-forwarded-upstream
+unace: unpack-message-for-orig
+unace: unpack-message-for-source
+unace: upstream-metadata-file-is-missing
