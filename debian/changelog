@@ -1,4 +1,4 @@
-unace (1.2b-19) UNRELEASED; urgency=medium
+unace (1.2b-19) unstable; urgency=medium
 
   * Switch to debhelper compatibility level 13.
   * Switch to Standards-Version 4.5.1 (no changes needed).
@@ -8,7 +8,7 @@ unace (1.2b-19) UNRELEASED; urgency=medium
   * Add debian/source/lintian-overrides to declare missing upstream.
   * Switch to dh sequencer.
 
- -- Guillem Jover <guillem@debian.org>  Sun, 29 Nov 2020 01:31:40 +0100
+ -- Guillem Jover <guillem@debian.org>  Thu, 24 Dec 2020 19:15:28 +0100
 
 unace (1.2b-18) unstable; urgency=medium
 
