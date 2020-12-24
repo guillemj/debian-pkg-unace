@@ -1,78 +1,30 @@
 #!/usr/bin/make -f
-# GNU copyright 1997 to 1999 by Joey Hess.
 
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-DEB_BUILD_MAINT_OPTIONS = hardening=+all future=+lfs
-DEB_CPPFLAGS_MAINT_APPEND = -DUNIX -DCASEINSENSE
-DEB_CFLAGS_MAINT_APPEND = -Wall
-DPKG_EXPORT_BUILDTOOLS = yes
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all future=+lfs
+export DEB_CPPFLAGS_MAINT_APPEND = -DUNIX -DCASEINSENSE
+export DEB_CFLAGS_MAINT_APPEND = -Wall
 
 include /usr/share/dpkg/default.mk
-include /usr/share/dpkg/buildtools.mk
 
 ifeq ($(DEB_HOST_ARCH_ENDIAN),little)
-CPPFLAGS += -DLO_HI_BYTE_ORDER
+DEB_CPPFLAGS_MAINT_APPEND += -DLO_HI_BYTE_ORDER
 else ifeq ($(DEB_HOST_ARCH_ENDIAN),big)
-CPPFLAGS += -DHI_LO_BYTE_ORDER
+DEB_CPPFLAGS_MAINT_APPEND += -DHI_LO_BYTE_ORDER
 else
 $(error "unknown endian")
 endif
 
-build-indep:
+%:
+	dh $@ --buildsystem=makefile
 
-build-arch:
-	dh_testdir
-	
-	$(MAKE) -f unix/makefile \
-	  CC=$(CC) CPPFLAGS="$(CPPFLAGS)" CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)"
+override_dh_auto_clean:
+	dh_auto_clean -- -f unix/makefile
 
-build: build-indep build-arch
+override_dh_auto_build:
+	dh_auto_build -- -f unix/makefile
 
-.PHONY: build-indep build-arch build
-
-clean:
-	dh_testdir
-	dh_testroot
-	
-	$(MAKE) -f unix/makefile clean
-	
-	dh_clean
-
-install-arch: build-arch
-	dh_testdir
-	dh_testroot
-	dh_prep
-	dh_installdirs
-	
-	#$(MAKE) -f unix/makefile install DESTDIR=$(CURDIR)/debian/unace
-	dh_install
-
-.PHONY: install-arch clean
-
-# Build architecture-independent files here.
-binary-indep:
-# Nothing to do.
-
-# Build architecture-dependent files here.
-binary-arch: install-arch
-	dh_testdir
-	dh_testroot
+override_dh_installchangelogs:
 	dh_installchangelogs changes.log
-	dh_installdocs
-	dh_installexamples
-	dh_installman
-	dh_link
-	dh_strip
-	dh_compress
-	dh_fixperms
-	dh_installdeb
-	dh_shlibdeps
-	dh_gencontrol
-	dh_md5sums
-	dh_builddeb
-
-binary: binary-indep binary-arch
-
-.PHONY: binary-indep binary-arch binary
