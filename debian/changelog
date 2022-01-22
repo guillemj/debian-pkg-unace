@@ -1,6 +1,7 @@
 unace (1.2b-20) UNRELEASED; urgency=medium
 
   * Switch to Standards-Version 4.6.0 (no changes needed).
+  * Use spaces around Makefile assignment operator.
 
  -- Guillem Jover <guillem@debian.org>  Sat, 22 Jan 2022 21:55:15 +0100
 

@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 
 # Uncomment this to turn on verbose mode.
-#export DH_VERBOSE=1
+#export DH_VERBOSE = 1
 
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all future=+lfs
 export DEB_CPPFLAGS_MAINT_APPEND = -DUNIX -DCASEINSENSE
