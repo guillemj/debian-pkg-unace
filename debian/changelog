@@ -1,3 +1,9 @@
+unace (1.2b-21) UNRELEASED; urgency=medium
+
+  * Fix out of bounds read for .ace header comment. (Closes: #785377)
+
+ -- Guillem Jover <guillem@debian.org>  Thu, 18 Aug 2022 11:03:24 +0200
+
 unace (1.2b-20) unstable; urgency=medium
 
   * Switch to Standards-Version 4.6.0 (no changes needed).
