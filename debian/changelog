@@ -3,6 +3,8 @@ unace (1.2b-21) UNRELEASED; urgency=medium
   * Fix out of bounds read for .ace header comment. (Closes: #785377)
   * Document in man page and package description that only ACE 1.0 archives
     are supported.
+  * Remove empty debian/watch file that was used to denote no upstream
+    location, as it is not liked by tooling and infrastructure.
 
  -- Guillem Jover <guillem@debian.org>  Thu, 18 Aug 2022 11:03:24 +0200
 
