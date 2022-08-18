@@ -1,8 +1,8 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: unace
-Upstream-Contact: Marcel Lemke <mlemke@winace.com>
 Source:
  The original source code was obtained from a mail from the upstream author.
+Upstream-Name: unace
+Upstream-Contact: Marcel Lemke <mlemke@winace.com>
 
 Files: *
 Copyright:
