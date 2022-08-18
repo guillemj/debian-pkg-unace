@@ -17,6 +17,12 @@ else
 $(error "unknown endian")
 endif
 
+buildflags =
+buildflags += CC=$(CC)
+buildflags += CPPFLAGS="$(CPPFLAGS)"
+buildflags += CFLAGS="$(CFLAGS)"
+buildflags += LDFLAGS="$(LDFLAGS)"
+
 %:
 	dh $@ --buildsystem=makefile
 
@@ -24,7 +30,7 @@ override_dh_auto_clean:
 	dh_auto_clean -- -f unix/makefile
 
 override_dh_auto_build:
-	dh_auto_build -- -f unix/makefile
+	dh_auto_build -- -f unix/makefile $(buildflags)
 
 override_dh_installchangelogs:
 	dh_installchangelogs changes.log
