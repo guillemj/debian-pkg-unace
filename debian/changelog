@@ -1,6 +1,8 @@
 unace (1.2b-21) UNRELEASED; urgency=medium
 
   * Fix out of bounds read for .ace header comment. (Closes: #785377)
+  * Document in man page and package description that only ACE 1.0 archives
+    are supported.
 
  -- Guillem Jover <guillem@debian.org>  Thu, 18 Aug 2022 11:03:24 +0200
 

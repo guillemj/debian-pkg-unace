@@ -17,3 +17,5 @@ Depends:
 Description: extract, test and view .ace archives
  The unace utility is used for extracting, testing and viewing
  the contents of archives created with the ACE archiver.
+ .
+ Note that only ACE 1.0 archives are supported.
