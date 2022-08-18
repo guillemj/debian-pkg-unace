@@ -1,4 +1,4 @@
-unace (1.2b-21) UNRELEASED; urgency=medium
+unace (1.2b-21) unstable; urgency=medium
 
   * Fix out of bounds read for .ace header comment. (Closes: #785377)
   * Document in man page and package description that only ACE 1.0 archives
@@ -10,7 +10,7 @@ unace (1.2b-21) UNRELEASED; urgency=medium
     set explicitly by upstream. Regression from switch to dh sequencer.
   * Move Source field close to Format field in debian/copyright.
 
- -- Guillem Jover <guillem@debian.org>  Thu, 18 Aug 2022 11:03:24 +0200
+ -- Guillem Jover <guillem@debian.org>  Thu, 18 Aug 2022 11:28:43 +0200
 
 unace (1.2b-20) unstable; urgency=medium
 
