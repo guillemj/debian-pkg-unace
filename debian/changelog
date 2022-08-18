@@ -5,6 +5,7 @@ unace (1.2b-21) UNRELEASED; urgency=medium
     are supported.
   * Remove empty debian/watch file that was used to denote no upstream
     location, as it is not liked by tooling and infrastructure.
+  * Switch to Standards-Version 4.6.1 (no changes needed).
 
  -- Guillem Jover <guillem@debian.org>  Thu, 18 Aug 2022 11:03:24 +0200
 
