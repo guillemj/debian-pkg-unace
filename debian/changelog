@@ -1,6 +1,7 @@
 unace (1.2b-22) UNRELEASED; urgency=medium
 
   * Fix typo in patch description.
+  * Update lintian overrides for removed debian/watch file.
 
  -- Guillem Jover <guillem@debian.org>  Sun, 21 Aug 2022 01:29:56 +0200
 
