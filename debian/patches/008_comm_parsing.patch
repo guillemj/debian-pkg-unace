@@ -1,5 +1,5 @@
 Description: Fixes comment parsing
- We need to honor the header comment buffer maxium size and not try to write
+ We need to honor the header comment buffer maximum size and not try to write
  or read out-of-bounds.
 Author: Guillem Jover <guillem@debian.org>
 Origin: vendor
