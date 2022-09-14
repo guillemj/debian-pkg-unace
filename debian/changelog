@@ -1,11 +1,11 @@
-unace (1.2b-22) UNRELEASED; urgency=medium
+unace (1.2b-22) unstable; urgency=medium
 
   * Fix typo in patch description.
   * Update lintian overrides for removed debian/watch file.
   * Add missing buildtools.mk include, fixing FTCBFS.
     Thanks to Helmut Grohne <helmut@subdivi.de>. (Closes: #1019688)
 
- -- Guillem Jover <guillem@debian.org>  Sun, 21 Aug 2022 01:29:56 +0200
+ -- Guillem Jover <guillem@debian.org>  Wed, 14 Sep 2022 04:28:13 +0200
 
 unace (1.2b-21) unstable; urgency=medium
 
