@@ -1,6 +1,7 @@
 unace (1.2b-23) UNRELEASED; urgency=medium
 
   * Switch to Standards-Version 4.6.2 (no changes needed).
+  * Do not trim debian/changelog.
 
  -- Guillem Jover <guillem@debian.org>  Fri, 13 Jan 2023 00:10:02 +0100
 
