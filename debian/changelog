@@ -1,10 +1,10 @@
-unace (1.2b-24) UNRELEASED; urgency=medium
+unace (1.2b-24) unstable; urgency=medium
 
   * Switch from future=+lfs to abi=+lfs build flags feature, and Build-Depends
     on dpkg-dev >= 1.22.0.
   * Switch to Standards-Version 4.7.0 (no changes needed).
 
- -- Guillem Jover <guillem@debian.org>  Wed, 17 Jan 2024 02:58:45 +0100
+ -- Guillem Jover <guillem@debian.org>  Tue, 16 Apr 2024 02:48:28 +0200
 
 unace (1.2b-23) unstable; urgency=medium
 
