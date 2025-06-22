@@ -1,3 +1,9 @@
+unace (1.2b-25) UNRELEASED; urgency=medium
+
+  * Use URL instead of FSF postal address for GPL in debian/copyright.
+
+ -- Guillem Jover <guillem@debian.org>  Mon, 23 Jun 2025 01:43:36 +0200
+
 unace (1.2b-24) unstable; urgency=medium
 
   * Switch from future=+lfs to abi=+lfs build flags feature, and Build-Depends
