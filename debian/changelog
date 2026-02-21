@@ -4,6 +4,7 @@ unace (1.2b-25) UNRELEASED; urgency=medium
   * Remove «Rules-Requires-Root: no», which is the current default.
   * Remove «Priority: optional», which is the current default.
   * Remove versioned Build-Depends on dpkg-dev, satisfied since Debian trixie.
+  * Add debian/watch file to mark upstream as untrackable.
 
  -- Guillem Jover <guillem@debian.org>  Mon, 23 Jun 2025 01:43:36 +0200
 

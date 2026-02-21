@@ -1,5 +1,4 @@
 # There is no upstream support.
-unace: debian-watch-file-is-missing
 unace: maintainer-manual-page
 unace: no-homepage-field
 unace: patch-not-forwarded-upstream
