@@ -1,4 +1,4 @@
-unace (1.2b-25) UNRELEASED; urgency=medium
+unace (1.2b-25) unstable; urgency=medium
 
   * Use URL instead of FSF postal address for GPL in debian/copyright.
   * Remove «Rules-Requires-Root: no», which is the current default.
@@ -8,7 +8,7 @@ unace (1.2b-25) UNRELEASED; urgency=medium
   * Add superficial autopkgtest for the crasher file from CVE-2015-2063.
   * Switch to Standards-Version 4.7.3 (no changes needed).
 
- -- Guillem Jover <guillem@debian.org>  Mon, 23 Jun 2025 01:43:36 +0200
+ -- Guillem Jover <guillem@debian.org>  Sat, 21 Feb 2026 02:41:11 +0100
 
 unace (1.2b-24) unstable; urgency=medium
 
