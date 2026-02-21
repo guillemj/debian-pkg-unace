@@ -1,0 +1,8 @@
+#!/bin/sh
+
+set -e
+exec 2>&1
+
+# Test that the corrupted file with a header smaller than expected does not
+# crash the tool (CVE-2015-2063).
+unace l debian/tests/crash.ace
