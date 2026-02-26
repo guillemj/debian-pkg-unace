@@ -6,7 +6,6 @@ Vcs-Git: https://git.hadrons.org/git/debian/pkgs/unace.git
 Standards-Version: 4.7.3
 Build-Depends:
  debhelper-compat (= 13),
- debhelper (>= 13.10),
 
 Package: unace
 Architecture: any
