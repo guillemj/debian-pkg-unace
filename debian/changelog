@@ -1,4 +1,4 @@
-unace (1.2b-26) UNRELEASED; urgency=medium
+unace (1.2b-26) unstable; urgency=medium
 
   * Update lintian overrides.
   * Fix builds on big-endian systems, by properly defining the expected
@@ -9,7 +9,7 @@ unace (1.2b-26) UNRELEASED; urgency=medium
     - Remove explicit inclusion of dpkg/buildtools.mk done now by
       dpkg/default.mk.
 
- -- Guillem Jover <guillem@debian.org>  Thu, 26 Feb 2026 23:23:46 +0100
+ -- Guillem Jover <guillem@debian.org>  Thu, 26 Feb 2026 23:36:36 +0100
 
 unace (1.2b-25) unstable; urgency=medium
 
