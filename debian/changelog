@@ -1,3 +1,9 @@
+unace (1.2b-26) UNRELEASED; urgency=medium
+
+  * Update lintian overrides.
+
+ -- Guillem Jover <guillem@debian.org>  Thu, 26 Feb 2026 23:23:46 +0100
+
 unace (1.2b-25) unstable; urgency=medium
 
   * Use URL instead of FSF postal address for GPL in debian/copyright.
