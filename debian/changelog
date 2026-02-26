@@ -1,6 +1,8 @@
 unace (1.2b-26) UNRELEASED; urgency=medium
 
   * Update lintian overrides.
+  * Fix builds on big-endian systems, by properly defining the expected
+    macros in debian/rules.
 
  -- Guillem Jover <guillem@debian.org>  Thu, 26 Feb 2026 23:23:46 +0100
 

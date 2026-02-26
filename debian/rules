@@ -3,12 +3,11 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE = 1
 
+include /usr/share/dpkg/architecture.mk
+
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all abi=+lfs
 export DEB_CPPFLAGS_MAINT_APPEND = -DUNIX -DCASEINSENSE
 export DEB_CFLAGS_MAINT_APPEND = -Wall
-
-include /usr/share/dpkg/default.mk
-include /usr/share/dpkg/buildtools.mk
 
 ifeq ($(DEB_HOST_ARCH_ENDIAN),little)
 DEB_CPPFLAGS_MAINT_APPEND += -DLO_HI_BYTE_ORDER
@@ -17,6 +16,9 @@ DEB_CPPFLAGS_MAINT_APPEND += -DHI_LO_BYTE_ORDER
 else
 $(error "unknown endian")
 endif
+
+include /usr/share/dpkg/default.mk
+include /usr/share/dpkg/buildtools.mk
 
 buildflags =
 buildflags += CC=$(CC)
