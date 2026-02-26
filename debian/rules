@@ -18,7 +18,6 @@ $(error "unknown endian")
 endif
 
 include /usr/share/dpkg/default.mk
-include /usr/share/dpkg/buildtools.mk
 
 buildflags =
 buildflags += CC=$(CC)

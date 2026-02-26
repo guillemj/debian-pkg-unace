@@ -5,6 +5,9 @@ unace (1.2b-26) UNRELEASED; urgency=medium
     macros in debian/rules.
   * Remove versioned build dependency on debhelper, satisfied since bookworm.
   * Run wrap-and-sort -ast on debian/tests/control.
+  * Declare compliance with dpkg-build-api (= 1).
+    - Remove explicit inclusion of dpkg/buildtools.mk done now by
+      dpkg/default.mk.
 
  -- Guillem Jover <guillem@debian.org>  Thu, 26 Feb 2026 23:23:46 +0100
 
