@@ -4,7 +4,7 @@ Description: Fixes cross-compilation support
  makefile via «$(CPP) -MM».
 Author: Guillem Jover <guillem@debian.org>
 Origin: vendor
-Forwarded: no
+Forwarded: not-needed
 Last-Update: 2019-07-11
 
 ---

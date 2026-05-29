@@ -7,7 +7,7 @@ Description: Fixes a buffer overflow when reading bogus file headers
 Author: Guillem Jover <guillem@debian.org>
 Origin: vendor
 Bug-Debian: https://bugs.debian.org/775003
-Forwarded: no
+Forwarded: not-needed
 Last-Update: 2015-02-24
 
 ---

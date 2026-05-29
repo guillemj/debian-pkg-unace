@@ -1,6 +1,8 @@
 unace (1.2b-27) UNRELEASED; urgency=medium
 
   * Switch to Standards-Version 4.7.4 (no changes needed).
+  * Switch Forwarded no to not-needed in patch metadata as there is no
+    upstream anymore.
 
  -- Guillem Jover <guillem@debian.org>  Mon, 06 Apr 2026 18:32:37 +0200
 

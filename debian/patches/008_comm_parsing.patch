@@ -3,7 +3,7 @@ Description: Fixes comment parsing
  or read out-of-bounds.
 Author: Guillem Jover <guillem@debian.org>
 Origin: vendor
-Forwarded: no
+Forwarded: not-needed
 Last-Update: 2022-08-18
 
 ---

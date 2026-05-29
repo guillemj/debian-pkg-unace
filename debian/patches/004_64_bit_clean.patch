@@ -2,7 +2,7 @@ Description: Make the program 64 bit clean, by using <stdint.h> to typedef
  the data types independently of the target system.
 Author: Guillem Jover <guillem@hadrons.org>
 Origin: vendor
-Forwarded: no
+Forwarded: not-needed
 Bug-Debian: https://bugs.debian.org/431380
 
 

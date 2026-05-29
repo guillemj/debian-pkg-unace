@@ -1,7 +1,7 @@
 Description: Fix compilations warnings
 Author: Guillem Jover <guillem@hadrons.org>
 Origin: vendor
-Forwarded: no
+Forwarded: not-needed
 
 
 Index: b/uac_dcpr.c
